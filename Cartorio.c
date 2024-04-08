@@ -61,10 +61,41 @@ int registro()
 	fprintf(file, cargo);
 	fclose(file);
 	
-	system("pause");
+	system("cls");
+     
+    int opcao=0; //Definindo variaveis
+	int x=1;
 	
+	for(x=1;x=1;)
+	{
 	
-}
+	printf("Deseja adicionar mais nomes?\n\n");
+	printf("\t1-Sim\n");
+	printf("\t2-Não\n");
+	printf("Opção: ");
+	
+	scanf("%d", &opcao);
+	system("cls");	
+			
+	
+	switch(opcao)
+	{
+		case 1:
+		registro();
+		break;
+		
+		case 2:
+		main();
+		break;
+		
+		default:
+	    printf ("Essa opção não está disponivel!\n");
+		system("pause");
+		break;
+	}
+	}
+}	
+
 
 int consultar()
 {
