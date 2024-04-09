@@ -61,10 +61,41 @@ int registro()
 	fprintf(file, cargo);
 	fclose(file);
 	
-	system("pause");
+	system("cls");
+     
+    int opcao=0; //Definindo variaveis
+	int x=1;
 	
+	for(x=1;x=1;)
+	{
 	
-}
+	printf("Deseja adicionar mais nomes?\n\n");
+	printf("\t1-Sim\n");
+	printf("\t2-Não\n");
+	printf("Opção: ");
+	
+	scanf("%d", &opcao);
+	system("cls");	
+			
+	
+	switch(opcao)
+	{
+		case 1:
+		registro();
+		break;
+		
+		case 2:
+		main();
+		break;
+		
+		default:
+	    printf ("Essa opção não está disponivel!\n");
+		system("pause");
+		break;
+	}
+	}
+}	
+
 
 int consultar()
 {
@@ -127,7 +158,8 @@ int main()
 	    printf ("Escolha a opção desejada do menu: \n\n"); 
 	    printf ("\t1 - Registrar nomes\n");
 	    printf ("\t2 - Consultar nomes\n");
-	    printf ("\t3 - Deletar nomes\n\n"); 
+	    printf ("\t3 - Deletar nomes\n"); 
+	    printf ("\t4 - Sair do sistema\n\n");
 	    printf ("Opção: ");//fim do menu
 	
 	    scanf("%d", &opcao); //armzenando a escolha do usuário
@@ -146,6 +178,11 @@ int main()
 			
 			case 3:
 			deletar();
+	     	break;
+	     	
+	     	case 4:
+	     	printf("Obrigado por utilizar esse sistema");
+	     	return 0;
 	     	break;
 	     	
 	     	default:
